@@ -7,6 +7,8 @@
 ### Problems
 There are different `run` commands in the model file corresponding to different trust boundary related problems.
 
+**Note: It is better to use `softno` in some of the problems. But SAT4JMax does not support it, so we choose to use `minsome` instead. It may be okay in our use cases for now, but its semantic is slightly different. To use `softno`, one can change the solver to `OpenWBO`. However, this is currently only available running AlloyMax under a Linux machine.**
+
 #### Compute trust boundary
 `TB1` and `TB2` are two problems for computing the trust boundaries for `monitorPatient` and `billManagement`, respectively. Running the two problems can generate the trust boundary for a given requirement.
 
