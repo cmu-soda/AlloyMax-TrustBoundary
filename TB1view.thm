@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<alloy>
+
+<view>
+
+<defaultnode/>
+
+<defaultedge/>
+
+<node>
+   <type name="AddOrderHistory"/>
+   <type name="AddRecord"/>
+   <type name="AdminStation"/>
+   <type name="AdminStation1"/>
+   <type name="Bill"/>
+   <type name="Component"/>
+   <type name="CreateBill"/>
+   <type name="CreateOrder"/>
+   <type name="GetBill"/>
+   <type name="GetOrder"/>
+   <type name="GetOrderHistory"/>
+   <type name="GetPayment"/>
+   <type name="GetRecord"/>
+   <type name="GetStatus"/>
+   <type name="Int"/>
+   <type name="NewComponent"/>
+   <type name="NursingStation"/>
+   <type name="NursingStation1"/>
+   <type name="Order"/>
+   <type name="OrderEntry"/>
+   <type name="OrderEntry1"/>
+   <type name="OrderHistory"/>
+   <type name="PatientID"/>
+   <type name="PatientMonitor"/>
+   <type name="PatientMonitor1"/>
+   <type name="PatientRecord"/>
+   <type name="PatientRecord1"/>
+   <type name="Payment"/>
+   <type name="PaymentManager"/>
+   <type name="PaymentManager1"/>
+   <type name="PhysicianStation"/>
+   <type name="PhysicianStation1"/>
+   <type name="Record"/>
+   <type name="Status"/>
+   <type name="String"/>
+   <type name="univ"/>
+   <type name="seq/Int"/>
+   <set name="this/BillManagementTB" type="Component"/>
+   <set name="this/Compromised" type="Component"/>
+   <set name="$monitorPatient_nursingStation" type="NursingStation"/>
+   <set name="$safelyInvoke_provider" type="Component"/>
+   <set name="$safelyInvoke_provider&apos;" type="Component"/>
+</node>
+
+<node color="Green">
+   <set name="this/MonitorPatientTB" type="Component"/>
+</node>
+
+<node visible="no">
+   <type name="Data"/>
+   <type name="Service"/>
+</node>
+
+<edge visible="no">
+   <relation name="initConn"> <type name="Component"/> <type name="Component"/> <type name="Service"/> </relation>
+</edge>
+
+<edge visible="no" attribute="yes">
+   <relation name="initCanAccess"> <type name="Component"/> <type name="Data"/> </relation>
+   <relation name="input"> <type name="Service"/> <type name="Data"/> </relation>
+   <relation name="output"> <type name="Service"/> <type name="Data"/> </relation>
+   <relation name="services"> <type name="Component"/> <type name="Service"/> </relation>
+</edge>
+
+</view>
+
+</alloy>
